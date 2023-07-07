@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Google</title>
+        <style>
+            *
+            {
+                margin: 0;
+                padding: 0;
+            }
+            button
+            {
+                align-self: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: x-large;
+                background-color:midnightblue;
+                color:grey;
+                height: 100px;
+                width: 200px;
+                border-radius: 100px;
+                border-color:navy;
+            }
+            input
+            {
+                align-self: center;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: xx-large;
+                background-color:midnightblue;
+                height: 100px;
+                width: 400px;
+                border-radius: 100px;
+                border-color:navy;
+            }
+            #page
+            {
+                background-color:darkslategrey;
+            }
+            #top
+            {
+                align-self: baseline;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 19%;
+                width: 100%;
+                margin-bottom: 1%;
+            }
+            #middle_top
+            {   
+                align-self: center;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 28%;
+                width: 100%;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+            #middle_bottom
+            {
+                align-self: center;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                height: 28%;
+                width: 100%;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+            #bottom
+            {
+                align-self: flex-end;
+                height: 19%;
+                width: 100%;
+                margin-top: 1%;
+            }
+            #mostrador
+            {
+                align-self: center;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: xx-large;
+                color:grey;
+            }
+            #palavra
+            {
+                align-self: center;
+                text-align: center;
+                color:grey;
+            }
+        </style>
+    </head>
+    <body id = "page">
+        <div id = "top">
+            <div id = "mostrador"></div>
+        </div>
+        <div id = "middle_top">
+            <input id = "palavra"></input>
+        </div>
+        <div id = "middle_bottom">
+                <button id = "botão1" onclick = "adicionar()">add</button>
+                <button id = "botão2" onclick = "exibir()">Show</button>
+        </div>
+        <div id = "bottom"></div>
+        <script>
+            var database = [];
+            var QuantidadePalavras = 0;
+            function adicionar()
+            {
+                var word = document.getElementById("palavra").value;
+                database[QuantidadePalavras] = word;
+                QuantidadePalavras++;
+            }
+            function exibir()
+            {
+                document.getElementById("mostrador").innerHTML = database;
+            }
+        </script>
+    </body>
+</html>
